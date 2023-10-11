@@ -72,12 +72,6 @@ def Home():
     risco_medio = float(df_selection['Rating'].mean())
 
 
-    print('investimento_total',investimento_total)
-    print('investimento_moda',investimento_moda)
-    print('investimento_media',investimento_media)
-    print('investimento_mediana',investimento_mediana)
-    print('risco_medio',risco_medio)
-
     col1, col2, col3, col4, col5 = st.columns(5)
     # col1, col2, col3, col4, col5 = st.columns(5, gap='large')
 
@@ -109,9 +103,8 @@ def Home():
 
 
 def graphs():
-    # investimento_total = int(investimento_total)
-    investimento_total = int(df_selection['Investment'].sum())
-    risco_medio= int(round(df_selection['Rating'].mean(),2))
+    # investimento_total = int(df_selection['Investment'].sum())
+    # risco_medio= int(round(df_selection['Rating'].mean(),2))
 
     investimento_por_business = df_selection.groupby(by=["BusinessType"]).count()[["Investment"]].sort_values(by="Investment")
 
@@ -132,6 +125,7 @@ def graphs():
 
         #     #simple line graph
     investment_state=df_selection.groupby(by=["State"]).count()[["Investment"]]
+    
     fig_state=px.line(
         investment_state,
         x=investment_state.index,
@@ -141,6 +135,7 @@ def graphs():
         color_discrete_sequence=["#0083b8"]*len(investment_state),
         template="plotly_white",
     )
+    
     fig_state.update_layout(
     xaxis=dict(tickmode="linear"),
     plot_bgcolor="rgba(0,0,0,0)",

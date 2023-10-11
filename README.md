@@ -4,10 +4,6 @@ A análise descritiva é um tipo de análise de dados que observa dados passados
 
 As estatísticas descritivas fornecem resumos simples sobre a amostra e sobre as observações que foram feitas. Esses resumos podem ser tanto quantitativos, ou seja, estatísticas de resumo, quanto visuais, ou seja, gráficos simples de entender. Esses resumos podem servir como base para a descrição inicial dos dados como parte de uma análise estatística mais extensa, ou podem ser suficientes por si só para uma investigação específica.
 
-Claro, aqui está um texto para o seu README explicando a etapa de criação da base de dados:
-
----
-
 ## Etapa 01: Criando e Populando a Base de Dados
 
 Com Beekeeper, executei o comando abaixo para criar a base de dados denominada "insurance":
